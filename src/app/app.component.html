@@ -1,0 +1,23 @@
+<p>colorIds: {{ colorIds }}</p>
+
+<p>zones: {{ zones }}</p>
+
+<div style="width: 50px;float:left;">
+  <div
+    *ngFor="let i of iterable()"
+    style="height: 10px;background-color:{{ getColor(i) }};font-size: 10px;"
+  >
+    {{ i }}
+  </div>
+</div>
+
+<div style="width: 50px;margin-left: 50px;float:left;">
+  <div
+    *ngFor="let i of iterable()"
+    style="height: 10px;background-color:{{
+      getColor(i, true)
+    }};font-size: 10px;"
+  >
+    {{ i }}
+  </div>
+</div>
